@@ -59,7 +59,7 @@ virtual-wardrobe-main/
 ├── README.md                # Documentation (You are here)
 ├── SOCIAL_MEDIA_POST.md     # Drafts for Community Choice Award
 ├── screenshots/             # Final Output (Screenshots)
-└── virtual-wardrobe (1)/    # Source Code
+└── web-app/                 # Source Code (Next.js Application)
     ├── app/                 # Next.js app directory
     ├── components/          # Reusable React components
     ├── hooks/               # Custom React hooks
@@ -77,9 +77,8 @@ virtual-wardrobe-main/
     Ensure you are in the root directory `Virtual-Wardrobe-main`.
 
 2.  **Navigate to the Source Directory**
-    *Note: The project source is nested.*
     ```bash
-    cd "virtual-wardrobe (1)"
+    cd web-app
     ```
 
 3.  **Install Dependencies**

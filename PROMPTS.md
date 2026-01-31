@@ -24,8 +24,20 @@ Our approach to building the Virtual Wardrobe relied on **Iterative & Component-
 ### Template 3: Feature Implementation
 > "Implement the logic for the 'Outfit Creator'. Allow users to drag and drop items from the sidebar onto a canvas. Use a grid layout. Ensure the state is managed efficiently."
 
+## Advanced Prompting Techniques Used
+
+### 1. Chain of Thought (CoT) prompting
+For complex logic like the "Outfit Recommender", we used CoT to break down the problem:
+> "Acting as a Senior Architect, plan the logic for an outfit recommendation algorithm. First, analyze the user's clothing data structure. Second, define matching rules based on color theory (complementary colors). Third, step-by-step, write the function to score and sort potential outfits."
+
+### 2. Role-Based Prompting
+We consistently assigned the AI specific personas to ensure high-quality output:
+- **Designer Persona**: "You are an award-winning UI/UX designer. Critique this card component and suggest 3 improvements for better visual hierarchy."
+- **QA Engineer Persona**: "You are a QA engineer. Write a test case for the upload form to handle huge image files."
+
 ## Log of Prompts Used
 1.  *Initial Setup*: "Setup a Next.js project with TypeScript and Tailwind."
-2.  *Design*: "Create a modern, sleek navbar with a blurred background."
-3.  *Logic*: "Write a hook `useWardrobe` to manage add/remove/update operations for clothing items."
-4.  *Hackathon Compliance*: "Add detailed README and documentation required for submission."
+2.  *Design*: "Create a modern, sleek navbar with a blurred background using `backdrop-blur-md`."
+3.  *Logic*: "Write a hook `useWardrobe` to manage add/remove/update operations for clothing items. Use optimistic UI updates."
+4.  *Refinement*: "The card animation is too jerky. Smooth it out using `framer-motion` spring physics."
+5.  *Hackathon Compliance*: "Add detailed README and documentation required for submission."
