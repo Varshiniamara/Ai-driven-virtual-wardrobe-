@@ -10,16 +10,26 @@
 
 ## 2. Problem Statement
 
-People suffer from "decision fatigue" with their wardrobes.
-1.  **Clutter**: Clothes are forgotten in the back of the closet.
-2.  **Matching**: It's hard to visualize outfits without trying them on.
-3.  **Inefficiency**: No tracking of what is worn most/least.
+In today’s fast-paced lifestyle, selecting an outfit that matches one’s skin tone, personal style, and occasion is a common challenge. Most individuals rely on trial and error, generic fashion advice, or limited inspiration, which often results in mismatched outfits and wasted time. Existing fashion platforms lack personalized analysis and fail to adapt recommendations to individual user characteristics. This creates a gap between user expectations and actual fashion outcomes. There is a strong need for a smart, user-centric system that can analyze visual inputs and preferences to deliver accurate, personalized outfit recommendations in real time.
 
-**Solution**: A digitized inventory that fits in your pocket, with AI styling assistance.
+## 3. System Architecture
 
-## 3. Simple Architecture Diagram
+```mermaid
+graph TD
+    User[User (Web / Mobile Browser)] -->|Uploads image, Selects preferences| Frontend[Frontend Application (Next.js / React)]
+    Frontend -->|API Request| Backend[Backend Server (Next.js API Routes)]
+    Backend -->|Routes requests| AI[AI Processing Engine (Gemini 2.0)]
+    Backend -->|Store/Retrieve| DB[(Database / LocalStorage)]
+    AI -->|Analysis & Recommendations| Backend
+    Backend -->|JSON Response| Frontend
+    Frontend -->|Displays| Output[Personalized Fashion Output]
 
-![System Architecture](./architecture.png)
+    subgraph "AI Capabilities"
+    AI --o SkinTone[Skin Tone Analysis]
+    AI --o OutfitClass[Outfit Classification]
+    AI --o StyleRec[Style Recommendation]
+    end
+```
 
 ### 💻 Core Framework
 -   **Next.js 15.2.4**: Leveraging the latest App Router and Server Components for optimal performance.
@@ -87,11 +97,10 @@ We utilized a **Component-Driven AI Strategy**:
 ```
 Virtual-Wardrobe-main/
 ├── README.md                # Scorecard & Documentation
-├── architecture.png         # System Diagram
 ├── demo_video.mp4           # 3-Minute Demo
 ├── src/
 │   ├── frontend/            # Next.js Application (Main Logic)
-│   ├── backend/             # API Logic (Documentation)
+│   ├── backend/             # API Logic
 │   └── ai/                  # AI Simulation Scripts
 ├── prompts/                 # Prompt Engineering Evidence
 │   ├── prompt_template.md
@@ -121,11 +130,3 @@ This project is fully reproducible.
 [INSERT YOUTUBE/DRIVE LINK HERE]
 
 *(See `demo_video.mp4` in root if uploaded directly)*
-
-## 12. Social Media Post (Community Choice Award)
-
-**Twitter/X**:
-"🚀 submitting Virtual Wardrobe for #Vibecraft! An AI closet organizer built with #NextJS and #Tailwind. Solves decision fatigue with style. @DataHaven_xyz @QuaiSquad #HackSRM"
-
-**LinkedIn**:
-"Excited to share Virtual Wardrobe, my submission for the Vibecraft Hackathon! A digital solution to organize and optimize your fashion. Check out the repo!"
