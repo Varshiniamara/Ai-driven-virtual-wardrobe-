@@ -114,11 +114,22 @@ Virtual-Wardrobe-main/
 
 ## 9. Final Outputs / Screenshots
 
-(Please refer to the `outputs/` folder for high-res images)
+## 9. Final Outputs / Screenshots
 
--   **Home Page**: Clean, dark-mode landing.
--   **Wardrobe Grid**: Drag-and-drop interface.
--   **Outfit Builder**: Canvas for mixing items.
+### 🏠 Landing Page
+![Landing Page](outputs/landing_page.png)
+
+### 🛠 Dashboard & Tools
+![Dashboard](outputs/dashboard_toolkit.png)
+
+### 📤 Upload & Preferences
+![Upload Preference](outputs/upload_preferences.png)
+
+### 🎨 Outfit Generator
+![Outfit Generator](outputs/outfit_generator.png)
+
+### 🎭 Skin Tone Analysis
+![Skin Tone Analysis](outputs/skin_tone_analysis.png)
 
 ## 10. Build Reproducibility Instructions
 
