@@ -8,6 +8,8 @@
 
 **Virtual Wardrobe** is an AI-powered digital closet that helps users organize their clothes, plan outfits, and solve the "I have nothing to wear" dilemma. It combines a premium glassmorphism UI with smart categorization.
 
+### 🚀 **Live Demo**: [v0-virtual-wardrobe-website.vercel.app](https://v0-virtual-wardrobe-website.vercel.app/)
+
 ## 2. Problem Statement
 
 In today’s fast-paced lifestyle, selecting an outfit that matches one’s skin tone, personal style, and occasion is a common challenge. Most individuals rely on trial and error, generic fashion advice, or limited inspiration, which often results in mismatched outfits and wasted time. Existing fashion platforms lack personalized analysis and fail to adapt recommendations to individual user characteristics. This creates a gap between user expectations and actual fashion outcomes. There is a strong need for a smart, user-centric system that can analyze visual inputs and preferences to deliver accurate, personalized outfit recommendations in real time.
