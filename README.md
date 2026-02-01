@@ -16,22 +16,7 @@ In today’s fast-paced lifestyle, selecting an outfit that matches one’s skin
 
 ## 3. System Architecture
 
-```mermaid
-graph TD
-    User[User (Web / Mobile Browser)] -->|Uploads image, Selects preferences| Frontend[Frontend Application (Next.js / React)]
-    Frontend -->|API Request| Backend[Backend Server (Next.js API Routes)]
-    Backend -->|Routes requests| AI[AI Processing Engine (Gemini 2.0)]
-    Backend -->|Store/Retrieve| DB[(Database / LocalStorage)]
-    AI -->|Analysis & Recommendations| Backend
-    Backend -->|JSON Response| Frontend
-    Frontend -->|Displays| Output[Personalized Fashion Output]
-
-    subgraph "AI Capabilities"
-    AI --o SkinTone[Skin Tone Analysis]
-    AI --o OutfitClass[Outfit Classification]
-    AI --o StyleRec[Style Recommendation]
-    end
-```
+![System Architecture](outputs/system_architecture.png)
 
 ### 💻 Core Framework
 -   **Next.js 15.2.4**: Leveraging the latest App Router and Server Components for optimal performance.
