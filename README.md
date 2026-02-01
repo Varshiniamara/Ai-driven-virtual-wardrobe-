@@ -1,109 +1,116 @@
-# Virtual Wardrobe - Vibe Coding Hackathon Submission
+# Virtual Wardrobe - Vibecraft Hackathon Submission
 
-A next-generation, AI-driven web application for managing and organizing your personal clothing collection with style. 
-
-> **Hackathon Submission**: Vibecraft Vibe Coding Hackathon
 > **Theme**: AI-Driven Utility & Design
 
-## 📄 Problem Statement
-In the fast-paced modern world, "decision fatigue" is real, especially when choosing what to wear. People own more clothes than ever but struggle to:
-1.  **Remember what they own**: Clothes get buried in the back of the closet.
-2.  **Coordinate outfits**: Matching items requires visualization which is hard to do mentally.
-3.  **Track usage**: Knowing what you wear most/least helps in sustainable fashion choices.
+---
 
-**Virtual Wardrobe** solves this by digitizing your closet, allowing for easy organization, outfit planning, and eventually AI-powered outfit recommendations.
+## 1. Project Title & Short Overview
 
-## 🏗️ System Architecture
+**Virtual Wardrobe** is an AI-powered digital closet that helps users organize their clothes, plan outfits, and solve the "I have nothing to wear" dilemma. It combines a premium glassmorphism UI with smart categorization.
 
-```mermaid
-graph TD
-    User[User] -->|Interacts| UI[Next.js Frontend]
-    UI -->|State Management| Hooks[React Hooks]
-    UI -->|Styling| Tailwind[Tailwind CSS]
-    Hooks -->|Data Persistence| LocalStorage[Browser Storage]
-    
-    subgraph "AI Integration"
-        Antigravity[AI Coding Assistant] -->|Generates| Code[Component Structure]
-        Antigravity -->|Refines| Design[UI/UX Design]
-    end
-```
+## 2. Problem Statement
 
-## 🛠️ Tech Stack
+People suffer from "decision fatigue" with their wardrobes.
+1.  **Clutter**: Clothes are forgotten in the back of the closet.
+2.  **Matching**: It's hard to visualize outfits without trying them on.
+3.  **Inefficiency**: No tracking of what is worn most/least.
 
-### Core
-- **Framework**: Next.js 15.2.4 (App Router)
-- **Language**: TypeScript 5
-- **Styling**: Tailwind CSS 3.4.17
-- **UI Components**: Radix UI / Shadcn UI
-- **Icons**: Lucide React
-- **Charts**: Recharts
-- **Validation**: Zod + React Hook Form
+**Solution**: A digitized inventory that fits in your pocket, with AI styling assistance.
 
-### AI Tools Used
-- **Google DeepMind Antigravity**: Used for full-stack code generation, debugging, and project structuring.
-- **LLM Prompting**: Utilized for generating semantic HTML and accessible UI components.
-- **v0.dev** (Inferred from project name `my-v0-project`): Initial scaffolding.
+## 3. Simple Architecture Diagram
 
-## 🤖 Prompt Strategy Summary
-We employed a **Component-Driven AI Development** strategy:
-1.  **Context Setting**: Defined the "Vibe" (Premium, Dark Mode, Sleek) initially.
-2.  **Atomic Generation**: Prompted for individual components (Cards, Buttons) to ensure isolation and reusability.
-3.  **Iterative Refinement**: Used feedback loops to polish the UI, specifically requesting "rich aesthetics" and "smooth interactions".
-*See `PROMPTS.md` for detailed prompt history.*
+![System Architecture](./architecture.png)
 
-## 📦 Project Structure
+## 4. Tech Stack
 
-```
-virtual-wardrobe-main/
-├── PROMPTS.md               # Prompt logs and templates
-├── README.md                # Documentation (You are here)
-├── SOCIAL_MEDIA_POST.md     # Drafts for Community Choice Award
-├── screenshots/             # Final Output (Screenshots)
-└── web-app/                 # Source Code (Next.js Application)
-    ├── app/                 # Next.js app directory
-    ├── components/          # Reusable React components
-    ├── hooks/               # Custom React hooks
-    └── lib/                 # Utility functions
-```
+-   **Frontend**: Next.js 15 (App Router), React 19, Tailwind CSS 3.4
+-   **Backend**: Next.js API Routes (Serverless)
+-   **AI**: Gemini (via Antigravity Agent)
+-   **Styling**: Shadcn UI + Lucide Icons + Framer Motion
+-   **Deployment**: Vercel
 
-## 🌐 Deployment (Live Demo)
-**[INSERT_DEPLOYED_LINK_HERE]** (e.g., Vercel, Netlify)
+## 5. Setup Instructions
 
-## 🚀 Build Reproducibility Instructions (Mandatory)
+To run this project locally:
 
-**Judges: Follow these exact steps to run the project locally.**
-
-1.  **Clone/Download the Repository**
-    Ensure you are in the root directory `Virtual-Wardrobe-main`.
-
-2.  **Navigate to the Source Directory**
+1.  Clone the repo:
     ```bash
-    cd web-app
+    git clone https://github.com/Varshiniamara/Ai-driven-virtual-wardrobe-.git
     ```
-
-3.  **Install Dependencies**
-    We use `pnpm` (or `npm`).
+2.  Navigate to the source code:
+    ```bash
+    cd src/frontend
+    ```
+3.  Install Dependencies:
     ```bash
     npm install
-    # OR
-    pnpm install
     ```
-
-4.  **Start the Development Server**
+4.  Run Dev Server:
     ```bash
     npm run dev
-    # OR
-    pnpm dev
     ```
+5.  Open `http://localhost:3000`.
 
-5.  **Access the Application**
-    Open your browser and visit: [http://localhost:3000](http://localhost:3000)
+*See `docs/setup_guide.md` for more details.*
 
-## 🎥 Demo
-(Link to 3-Minute Demo Video to be added here)
+## 6. AI Tools Used
 
-## 📱 Features
-- **Digital Closer**: Add, edit, and view details of clothing items.
-- **Category Filtering**: Sort by Tops, Bottoms, Shoes, etc.
-- **Outfit Planner**: Combine items to see how they look together.
-- **Responsive Design**: Works on Desktop and Mobile.
+-   **Google DeepMind Antigravity**: For end-to-end code generation and debugging.
+-   **LLM Prompting**: For generating component logic and accessibility features.
+
+## 7. Prompt Strategy Summary
+
+We utilized a **Component-Driven AI Strategy**:
+-   **Role-Based Prompting**: Assigned the AI roles like "Senior Designer" for UI work.
+-   **Iterative Refinement**: Loop of Generate -> Critique -> Polish.
+-   **Chain of Thought**: Used for complex logic like the Outfit Recommender algorithm.
+
+*See `prompts/prompts_used.md` and `prompts/prompt_template.md` for full logs.*
+
+## 8. Source Code Overview / Folder Structure
+
+```
+Virtual-Wardrobe-main/
+├── README.md                # Scorecard & Documentation
+├── architecture.png         # System Diagram
+├── demo_video.mp4           # 3-Minute Demo
+├── src/
+│   ├── frontend/            # Next.js Application (Main Logic)
+│   ├── backend/             # API Logic (Documentation)
+│   └── ai/                  # AI Simulation Scripts
+├── prompts/                 # Prompt Engineering Evidence
+│   ├── prompt_template.md
+│   └── prompts_used.md
+├── docs/                    # Reproducibility Docs
+│   └── setup_guide.md
+└── outputs/                 # Screenshots & Final Output
+```
+
+## 9. Final Outputs / Screenshots
+
+(Please refer to the `outputs/` folder for high-res images)
+
+-   **Home Page**: Clean, dark-mode landing.
+-   **Wardrobe Grid**: Drag-and-drop interface.
+-   **Outfit Builder**: Canvas for mixing items.
+
+## 10. Build Reproducibility Instructions
+
+This project is fully reproducible.
+1.  Follow the **Setup Instructions** above.
+2.  No external database is required (uses LocalStorage/Mock Data for demo).
+3.  Works on Node.js v18+.
+
+## 11. Demo Video Link
+
+[INSERT YOUTUBE/DRIVE LINK HERE]
+
+*(See `demo_video.mp4` in root if uploaded directly)*
+
+## 12. Social Media Post (Community Choice Award)
+
+**Twitter/X**:
+"🚀 submitting Virtual Wardrobe for #Vibecraft! An AI closet organizer built with #NextJS and #Tailwind. Solves decision fatigue with style. @DataHaven_xyz @QuaiSquad #HackSRM"
+
+**LinkedIn**:
+"Excited to share Virtual Wardrobe, my submission for the Vibecraft Hackathon! A digital solution to organize and optimize your fashion. Check out the repo!"
