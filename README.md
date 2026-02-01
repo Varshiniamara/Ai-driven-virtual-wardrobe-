@@ -21,13 +21,28 @@ People suffer from "decision fatigue" with their wardrobes.
 
 ![System Architecture](./architecture.png)
 
-## 4. Tech Stack
+### 💻 Core Framework
+-   **Next.js 15.2.4**: Leveraging the latest App Router and Server Components for optimal performance.
+-   **React 19**: Utilizing the newest concurrent features and server actions.
+-   **TypeScript 5**: Strict type safety ensures code reliability and maintainability.
 
--   **Frontend**: Next.js 15 (App Router), React 19, Tailwind CSS 3.4
--   **Backend**: Next.js API Routes (Serverless)
--   **AI**: Gemini (via Antigravity Agent)
--   **Styling**: Shadcn UI + Lucide Icons + Framer Motion
--   **Deployment**: Vercel
+### 🎨 UI & Styling
+-   **Tailwind CSS 3.4**: Utility-first styling for a completely custom, responsive design.
+-   **Shadcn UI (Radix Primitives)**: Accessible, headless UI components (Dialog, Tabs, Slider, etc.).
+-   **Lucide React**: Modern, scalable SVG icons.
+-   **Tailwindcss-Animate**: For smooth micro-interactions and transitions.
+-   **Next-Themes**: Robust light/dark mode implementation.
+
+### 📊 Data & Functionality
+-   **Recharts**: For visualizing wardrobe statistics (cost, usage, color distribution).
+-   **Zod + React Hook Form**: Type-safe schema validation for all user inputs.
+-   **Date-fns**: Lightweight date manipulation library.
+-   **Vaul**: Drawer component for mobile-first interactions.
+-   **Sonner**: Toast notifications for user feedback.
+
+### 🧠 AI & Integration
+-   **Gemini 2.0 (via Agent)**: Powering the intelligence behind outfit recommendations.
+-   **Serverless API Routes**: Handling backend logic within the Next.js infrastructure.
 
 ## 5. Setup Instructions
 
